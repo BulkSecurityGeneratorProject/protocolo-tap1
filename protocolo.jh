@@ -1,0 +1,46 @@
+entity Local {
+	codLocal Integer
+	descLocal String
+}
+
+entity Pessoa {
+	codPessoa Integer
+    nome String
+    dataNasc LocalDate	
+    sexo Sexo
+}
+
+entity Usuario{
+	codUsu Integer
+    login String
+    senha String
+    email String
+}
+
+entity Protocolo {
+}
+
+enum Sexo {
+    Masculino, Feminino
+}
+
+relationship ManyToMany {
+	Protocolo{origem} to Local
+}
+
+relationship ManyToMany {
+	Protocolo{destino} to Local
+}
+
+relationship OneToMany {
+	Protocolo{requerente} to Pessoa
+}
+
+relationship OneToOne {
+	Usuario{pessoa} to Pessoa
+}
+
+relationship ManyToOne {
+	Protocolo{usuario} to Usuario
+}
+
