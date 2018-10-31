@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "ProtocoloTAP1",
+    "packageName": "com.andre.protocolo",
+    "packageFolder": "com/andre/protocolo",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "languages": [
+      "en",
+      "pt-br"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.5.0",
+    "jwtSecretKey": "NmNlMzdkODc0NGQ0YmY5ODk5MWRlN2IzOTkxMDk4Y2Y1ODUzYjU5YWNmMTU1ZGY1ZGJiYzNkMjJkMDQ4NmMzMDk2MDBhNWViZmRlYmYxNGJmZWFiYjFiM2EyMDI3MGZlOTY1MzhiNzI0MDVmY2I0MWY1NjRiZjkxYThiY2Q5YjI="
+  },
+  "git-provider": "GitHub",
+  "git-company": "andre3103",
+  "repository-name": "protocolo-tap1"
+}
