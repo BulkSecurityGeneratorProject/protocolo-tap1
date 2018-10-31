@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-pessoa-heading" jhiTranslate="protocoloTap1App.pessoa.home.createOrEditLabel">Create or edit a Pessoa</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!pessoa.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="pessoa.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="protocoloTap1App.pessoa.codPessoa" for="field_codPessoa">Cod Pessoa</label>
+                    <input type="number" class="form-control" name="codPessoa" id="field_codPessoa"
+                        [(ngModel)]="pessoa.codPessoa" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="protocoloTap1App.pessoa.nome" for="field_nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="field_nome"
+                        [(ngModel)]="pessoa.nome" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="protocoloTap1App.pessoa.dataNasc" for="field_dataNasc">Data Nasc</label>
+                    <div class="input-group">
+                        <input id="field_dataNasc" type="text" class="form-control" name="dataNasc" ngbDatepicker  #dataNascDp="ngbDatepicker" [(ngModel)]="pessoa.dataNasc"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataNascDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="protocoloTap1App.pessoa.sexo" for="field_sexo">Sexo</label>
+                    <select class="form-control" name="sexo" [(ngModel)]="pessoa.sexo" id="field_sexo" >
+                        <option value="Masculino">{{'protocoloTap1App.Sexo.Masculino' | translate}}</option>
+                        <option value="Feminino">{{'protocoloTap1App.Sexo.Feminino' | translate}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="protocoloTap1App.pessoa.protocolo" for="field_protocolo">Protocolo</label>
+                    <select class="form-control" id="field_protocolo" name="protocolo" [(ngModel)]="pessoa.protocolo" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="protocoloOption.id === pessoa.protocolo?.id ? pessoa.protocolo : protocoloOption" *ngFor="let protocoloOption of protocolos; trackBy: trackProtocoloById">{{protocoloOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

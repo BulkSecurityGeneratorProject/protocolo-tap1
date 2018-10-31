@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Protocolo.
+    -->
+    <changeSet id="20181031182202-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="usuario_id"
+                                 baseTableName="protocolo"
+                                 constraintName="fk_protocolo_usuario_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="usuario"/>
+
+        <addForeignKeyConstraint baseColumnNames="protocolos_id"
+                                 baseTableName="protocolo_origem"
+                                 constraintName="fk_protocolo_origem_protocolos_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="protocolo"/>
+        <addForeignKeyConstraint baseColumnNames="origems_id"
+                                 baseTableName="protocolo_origem"
+                                 constraintName="fk_protocolo_origem_origems_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="local"/>
+        
+        <addForeignKeyConstraint baseColumnNames="protocolos_id"
+                                 baseTableName="protocolo_destino"
+                                 constraintName="fk_protocolo_destino_protocolos_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="protocolo"/>
+        <addForeignKeyConstraint baseColumnNames="destinos_id"
+                                 baseTableName="protocolo_destino"
+                                 constraintName="fk_protocolo_destino_destinos_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="local"/>
+        
+    </changeSet>
+</databaseChangeLog>

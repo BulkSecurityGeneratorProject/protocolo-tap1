@@ -1,0 +1,25 @@
+
+{
+    "protocoloTap1App": {
+        "protocolo" : {
+            "home": {
+                "title": "Protocolos",
+                "createLabel": "Criar novo Protocolo",
+                "createOrEditLabel": "Criar ou editar Protocolo"
+            },
+            "created": "Um novo Protocolo foi criado com o identificador {{ param }}",
+            "updated": "Um Protocolo foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Protocolo foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Protocolo {{ id }}?"
+            },
+            "detail": {
+                "title": "Protocolo"
+            },
+            "requerente": "Requerente",
+            "usuario": "Usuario",
+            "origem": "Origem",
+            "destino": "Destino"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="usuario">
+            <h2><span jhiTranslate="protocoloTap1App.usuario.detail.title">Usuario</span> {{usuario.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="protocoloTap1App.usuario.codUsu">Cod Usu</span></dt>
+                <dd>
+                    <span>{{usuario.codUsu}}</span>
+                </dd>
+                <dt><span jhiTranslate="protocoloTap1App.usuario.login">Login</span></dt>
+                <dd>
+                    <span>{{usuario.login}}</span>
+                </dd>
+                <dt><span jhiTranslate="protocoloTap1App.usuario.senha">Senha</span></dt>
+                <dd>
+                    <span>{{usuario.senha}}</span>
+                </dd>
+                <dt><span jhiTranslate="protocoloTap1App.usuario.email">Email</span></dt>
+                <dd>
+                    <span>{{usuario.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="protocoloTap1App.usuario.pessoa">Pessoa</span></dt>
+                <dd>
+                    <div *ngIf="usuario.pessoa">
+                        <a [routerLink]="['/pessoa', usuario.pessoa?.id, 'view']">{{usuario.pessoa?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/usuario', usuario.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

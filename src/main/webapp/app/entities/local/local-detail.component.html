@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="local">
+            <h2><span jhiTranslate="protocoloTap1App.local.detail.title">Local</span> {{local.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="protocoloTap1App.local.codLocal">Cod Local</span></dt>
+                <dd>
+                    <span>{{local.codLocal}}</span>
+                </dd>
+                <dt><span jhiTranslate="protocoloTap1App.local.descLocal">Desc Local</span></dt>
+                <dd>
+                    <span>{{local.descLocal}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/local', local.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

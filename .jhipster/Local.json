@@ -1,0 +1,23 @@
+{
+    "name": "Local",
+    "fields": [
+        {
+            "fieldName": "codLocal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "descLocal",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181031182159",
+    "entityTableName": "local",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

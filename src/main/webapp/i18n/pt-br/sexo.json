@@ -1,0 +1,9 @@
+{
+    "protocoloTap1App": {
+        "Sexo" : {
+            "null": "",
+            "Masculino": "Masculino",
+            "Feminino": "Feminino"
+        }
+    }
+}

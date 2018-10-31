@@ -1,0 +1,23 @@
+
+{
+    "protocoloTap1App": {
+        "local" : {
+            "home": {
+                "title": "Locals",
+                "createLabel": "Criar novo Local",
+                "createOrEditLabel": "Criar ou editar Local"
+            },
+            "created": "Um novo Local foi criado com o identificador {{ param }}",
+            "updated": "Um Local foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Local foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Local {{ id }}?"
+            },
+            "detail": {
+                "title": "Local"
+            },
+            "codLocal": "Cod Local",
+            "descLocal": "Desc Local"
+        }
+    }
+}
